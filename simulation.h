@@ -28,32 +28,32 @@ void stabilize(obj *agent) {
 
 ////////////////////////////////////////////////////////////////////////////
 void openTubes(sbModel *M, int id, float dTheta) {
-            rotateModel(90, ZAXIS, M);
-            rotateModel(-90, XAXIS, M);
-            shift(-1.2, 0.0, 2.0, M);
-            rotateModel(float(-id)*120.0-180.0, ZAXIS, M);
-            shift(0.0, -0.25, 0.0, M);
-            rotateModel(dTheta, XAXIS, M);
-            shift(0.0, 0.25, 0.0, M);
-            rotateModel(float(id)*120.0+180.0, ZAXIS, M);
-            shift(1.2, 0.0, -2.0, M);
-            rotateModel(90, XAXIS, M);
-            rotateModel(-90, ZAXIS, M);
+    rotateModel(90, ZAXIS, M);
+    rotateModel(-90, XAXIS, M);
+    shift(-1.2, 0.0, 2.0, M);
+    rotateModel(float(-id)*120.0-180.0, ZAXIS, M);
+    shift(0.0, -0.25, 0.0, M);
+    rotateModel(dTheta, XAXIS, M);
+    shift(0.0, 0.25, 0.0, M);
+    rotateModel(float(id)*120.0+180.0, ZAXIS, M);
+    shift(1.2, 0.0, -2.0, M);
+    rotateModel(90, XAXIS, M);
+    rotateModel(-90, ZAXIS, M);
 }
 
 
 void closeTubes(sbModel *M, int id, float dTheta) {
-            rotateModel(90, ZAXIS, M);
-            rotateModel(-90, XAXIS, M);
-            shift(-1.2, 0.0, 2.0, M);
-            rotateModel(float(-id)*120.0-180.0, ZAXIS, M);
-            shift(0.0, -0.25, 0.0, M);
-            rotateModel(-dTheta, XAXIS, M);
-            shift(0.0, 0.25, 0.0, M);
-            rotateModel(float(id)*120.0+180.0, ZAXIS, M);
-            shift(1.2, 0.0, -2.0, M);
-            rotateModel(90, XAXIS, M);
-            rotateModel(-90, ZAXIS, M);
+    rotateModel(90, ZAXIS, M);
+    rotateModel(-90, XAXIS, M);
+    shift(-1.2, 0.0, 2.0, M);
+    rotateModel(float(-id)*120.0-180.0, ZAXIS, M);
+    shift(0.0, -0.25, 0.0, M);
+    rotateModel(-dTheta, XAXIS, M);
+    shift(0.0, 0.25, 0.0, M);
+    rotateModel(float(id)*120.0+180.0, ZAXIS, M);
+    shift(1.2, 0.0, -2.0, M);
+    rotateModel(90, XAXIS, M);
+    rotateModel(-90, ZAXIS, M);
 
 
 }
