@@ -9,8 +9,37 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00321ec0-5843-4bc0-8955-744b62bea9f5" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="00321ec0-5843-4bc0-8955-744b62bea9f5" name="Default Changelist" comment="ignore .idea">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/draw.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/models/agent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/models/emplacement.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/models/interface.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/models/light.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/models/model.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spacegame/models/primitive.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asteroid-view.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asteroid.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dock.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drone-view.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drone.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/globe-model.h" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/models/globe.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/primitives.h" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/primitives.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quaternion.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation.h" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/simulation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/space.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tug.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/models/shipyard.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility.h" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,20 +48,45 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="bWjRVXzG" />
+  </component>
   <component name="ProjectId" id="1PFiGPZ8sol2UTl74Qb7G3Q242m" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spacegame" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/asteroid" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -48,10 +102,58 @@
       <updated>1565476149341</updated>
       <workItem from="1565476151937" duration="2781000" />
       <workItem from="1568139144331" duration="201000" />
+      <workItem from="1576712074212" duration="1139000" />
+      <workItem from="1576731971968" duration="569000" />
+      <workItem from="1579002641866" duration="252000" />
+      <workItem from="1579002963499" duration="46000" />
+      <workItem from="1580342653580" duration="18976000" />
     </task>
+    <task id="LOCAL-00001" summary="ignore .idea">
+      <created>1579002764707</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579002764707</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ignore .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore .idea" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="323" y="53" width="860" height="820" key="CommitChangelistDialog2" timestamp="1579002764539">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="323" y="53" width="860" height="820" key="CommitChangelistDialog2/70.27.1370.873@70.27.1370.873" timestamp="1579002764539" />
+    <state x="541" y="214" width="424" height="497" key="FileChooserDialogImpl" timestamp="1580343652611">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="541" y="214" width="424" height="497" key="FileChooserDialogImpl/70.27.1370.873@70.27.1370.873" timestamp="1580343652611" />
+    <state x="353" y="192" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1579002770239">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="353" y="192" width="800" height="541" key="Vcs.Push.Dialog.v2/70.27.1370.873@70.27.1370.873" timestamp="1579002770239" />
+    <state x="415" y="283" key="com.intellij.ide.util.TipDialog" timestamp="1579002965850">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="415" y="283" key="com.intellij.ide.util.TipDialog/70.27.1370.873@70.27.1370.873" timestamp="1579002965850" />
   </component>
 </project>

@@ -2,7 +2,39 @@
 #define OPEN                        0
 
 
-////////////////////////////////////////////////////////////////////////////
+void dock (slope, ringNum) {
+
+    pointCount = 9;
+    float D, C, H;
+    float Y[pointCount], Z[pointCount];
+
+    if (ringNum == 1)
+    {
+        Y = {0.50, 1.00, 1.00, 1.75, 2.25, 2.25, 1.50, 1.50, 0.50};
+        Z = {1.25, 1.25, 1.50, 1.50, 0.50, 0.00, 0.00, 0.25, 0.75};
+    }
+    if (ringNum == 2)
+    {
+        D = 1.5 - slope*0.75;
+        Y = {0.50, 1.00, 1.00, 1.75, 2.25, 2.25, 1.00, 1.00, 0.50};
+        Z = {1.25, 1.25, 1.50,   D , 0.50, 0.00, 0.00, 0.25, 0.75};
+    }
+
+    if (ringNum ==3)
+    {
+        D = 1.5 - slope*0.75;
+        C = 1.25;
+        H = 0.75;
+        Y = {0.50, 1.00, 1.00, 1.75, 2.25, 2.25, 1.00, 1.00, 0.50};
+        Z = {1.25, 1.25, C   , D   , 0.50, 0.00, 0.00, H   , 0.75];
+        }
+
+
+    }
+}
+
+
+
 void build_body (sbModel *M) {
 
     sbModel *tempMod; tempMod = new sbModel;
@@ -51,7 +83,7 @@ void build_body (sbModel *M) {
     
 }
 
-////////////////////////////////////////////////////////////////////////////
+
 void build_arm (sbModel *M) {
 
     sbModel *tempMod; tempMod = new sbModel;
@@ -120,13 +152,6 @@ void build_arm (sbModel *M) {
 }
 
 
-////////////////////////////////////////////////////////////////////////////
-void build_launcher () {
-
-
-}
-
-////////////////////////////////////////////////////////////////////////////
 void build_engine (float S, float A, float B, float C, sbModel *M) {
     sbModel *tempMod; tempMod = new sbModel;
     sbPrimitive *sbPolygon; sbPolygon = new sbPrimitive;
@@ -146,7 +171,8 @@ void build_engine (float S, float A, float B, float C, sbModel *M) {
     shift(A, B, C, M);
 }
 
-////////////////////////////////////////////////////////////////////////////
+
+
 void build_thruster (float A, float B, float C, sbModel *M) {
     sbModel *tempMod;
     tempMod = new sbModel;
@@ -165,7 +191,8 @@ void build_thruster (float A, float B, float C, sbModel *M) {
     shift(A, B, C, M);
 }
 
-////////////////////////////////////////////////////////////////////////////
+
+
 void build_tube (float S, float A, float B, float C, sbModel *M) {
     sbModel *tempMod;
     tempMod = new sbModel;
@@ -202,7 +229,7 @@ void build_tube (float S, float A, float B, float C, sbModel *M) {
  
 }
  
-////////////////////////////////////////////////////////////////////////////
+
 void build_tube_cover (float S, float A, float B, float C, sbModel *M) {
     sbModel *tempMod;
     tempMod = new sbModel;
@@ -229,7 +256,6 @@ void build_tube_cover (float S, float A, float B, float C, sbModel *M) {
 }
 
 
-////////////////////////////////////////////////////////////////////////////
 void build_ship () {
     sbModel *tempModel; tempModel = new sbModel;
     int mn = 0, mm;    
@@ -364,15 +390,65 @@ void build_ship () {
     scale(0.75*tubeScale, 0.75*tubeScale, 1.0, M[mn]);
     shift(testOffset+1.2-tubeScale, 1.0, 0.0, M[mn]);
     mn++;
-    
-    
+
     for (int ii=0; ii<mn; ii++) {
        rotateModel(90.0,XAXIS,M[ii]);
        rotateModel(-90.0,ZAXIS,M[ii]);
        //scale(0.2,0.2,0.2,M[ii]);  
     }
-    
-    //printf("%d \n", mn);
-    
+}
 
+
+
+
+
+void build_drone () {
+    sbModel *tempModel;
+    tempModel = new sbModel;
+    sbPolygon = new sbPrimitive;
+    int mn = 0, mm;
+    for (int ii=0; ii<100; ii++) {
+        sbPoly[ii] = new sbPrimitive;
+        M[ii] = new sbModel;
+    }
+
+    int res = 24;
+    float radius[100];
+    float offset[100];
+    float slope;
+
+    for (int ii=0; ii<res; ii++) {
+        radius[ii] = sin(ii*90.0/res*radians);
+        offset[ii] = cos(ii*90.0/res*radians);
+    }
+    for (int ii=res; ii<res+6; ii++)    {
+        radius[ii] = sin(ii*90.0/res*radians);
+        offset[ii] = cos(ii*90.0/res*radians);
+        if (ii==res+5) {slope = (radius[ii]-radius[ii-1])/(offset[ii]-offset[ii-1]);}
+    }
+    for (int ii=res+6; ii<2*res; ii++) {
+        offset[ii] = offset[ii-1] - 1.0/(float(res)-6);
+        radius[ii] = radius[ii-1] - slope*1.0/(float(res)-6);
+    }
+
+
+    int nPts = 49;
+    float rotIncrement = -1.0 * 120.0 / float(nPts-1) * radians; // rotation increment
+    float vertPosition[] = {1.0, 0.0, 0.0}; // initial point
+    float srad = 1.0;
+    sbPolygon->np = nPts; // point count
+    for (int ii=0; ii<nPts; ii++) {
+        srad = 1.0 + 0.3*sin(3.0*float(ii)*rotIncrement/2.0)*sin(3.0*float(ii)*rotIncrement/2.0)
+                     *sin(3.0*float(ii)*rotIncrement/2.0)*sin(3.0*float(ii)*rotIncrement/2.0)
+                     *sin(3.0*float(ii)*rotIncrement/2.0)*sin(3.0*float(ii)*rotIncrement/2.0)
+                     *sin(3.0*float(ii)*rotIncrement/2.0)*sin(3.0*float(ii)*rotIncrement/2.0);
+
+        // copy point to polygon
+        for (int dim=0; dim<2; dim++) sbPolygon->vert[ii][dim] = vertPosition[dim]*srad;
+        rotateVector(rotIncrement, ZAXIS, vertPosition);
+    }
+
+    extrude_planar(2*res, radius, offset, sbPolygon, tempModel);
+    removeDuplicates(tempModel);
+    exportModel("drone/drone.dat", tempModel);
 }

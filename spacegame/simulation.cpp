@@ -1,32 +1,29 @@
-// SECTION: SIMULATION FUNCTIONS
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-void impulse(obj *agent) {
-    for (int dim=0; dim<3; dim++) agent->veloc[dim] += 0.005*agent->heading[dim];
+bool fpsCounter(void) {
+    fpsCount++;
+    float seconds;
+    if (fpsCount>=1000) {
+        fpsTimeNow = clock();
+        fpsTimeElapsed = fpsTimeNow - fpsTimePrevious;
+        seconds = 0.001 * ((float) fpsTimeElapsed) / CLOCKS_PER_SEC;
+        fps = 1.0 / seconds;
+        printf("Average framerate... %5.2f \n", fps);
+        printf("  Total triangles... %d \n", TOTAL_TRIANGLES);
+        fpsTimePrevious = fpsTimeNow;
+        fpsCount = 0;
+    }
+    return true;
 }
 
-////////////////////////////////////////////////////////////////////////////
-void brake(obj *agent) {
-    for (int dim=0; dim<3; dim++) agent->veloc[dim] -= 0.005*agent->heading[dim];
+
+float find_angle (int id1, int id0, obj *agent[100]) {
+    float dx = agent[id1]->position[0] - agent[id0]->position[0];
+    float dy = agent[id1]->position[1] - agent[id0]->position[1];
+    float angle = atan2(dy,dx)*180.0/3.14159;
+    if (angle < 0.0) angle += 360.0;
+    return angle;
 }
 
-////////////////////////////////////////////////////////////////////////////
-void turn(float direction, obj *agent) {
-    agent->rot_v += direction;
-}
 
-////////////////////////////////////////////////////////////////////////////
-void fire_wpn(emplacement *weapon) {
-    if (weapon->state == 0) weapon->state = 1;
-    weapon->cooldown = 50;
-}
-
-////////////////////////////////////////////////////////////////////////////
-void stabilize(obj *agent) {
-    agent->rot_v += -1.0*agent->rot_v;
-}
-
-////////////////////////////////////////////////////////////////////////////
 void openTubes(sbModel *M, int id, float dTheta) {
     rotateModel(90, ZAXIS, M);
     rotateModel(-90, XAXIS, M);
@@ -54,35 +51,20 @@ void closeTubes(sbModel *M, int id, float dTheta) {
     shift(1.2, 0.0, -2.0, M);
     rotateModel(90, XAXIS, M);
     rotateModel(-90, ZAXIS, M);
-
-
 }
+
+
 void weigh (float W, float *U) {
-    U[0] *= W; U[1] *= W; U[2] *= W;
+    U[0] *= W;
+    U[1] *= W;
+    U[2] *= W;
 }
+
 
 float sign (float number) {
-    if (number >= 0.0) return 1.0;
-    else return -1.0;
+    return number >= 0.0 ? 1.0 : -1.0;
 }
 
-void findGroupHeading (obj *agent[1000], group *formation) {
-    formation->heading[0] = formation->heading[1] = formation->heading[2] = 0.0;
-    for (int ii = 0; ii < formation->size; ii++) {
-        for (int dim = 0; dim < 3; dim++) {
-            formation->heading[dim] += agent[formation->list[ii]]->heading[dim];
-        }
-    }
-}
-
-void findGroupCenter (obj *agent[1000], group *formation) {
-    formation->center[0] = formation->center[1] = formation->center[2] = 0.0;
-    for (int ii = 0; ii < formation->size; ii++) {
-        for (int dim = 0; dim < 3; dim++) {
-            formation->center[dim] += agent[formation->list[ii]]->position[dim] / formation->size;
-        }
-    }
-}
 
 float* align (obj *agent, group *formation, float *alignment) {
     for (int dim = 0; dim < 3; dim++) {
@@ -92,11 +74,13 @@ float* align (obj *agent, group *formation, float *alignment) {
     return alignment;
 }
 
+
 float* condense (obj *agent, group *formation, float *attractor) {
     subtract(formation->center, agent->position, attractor);
     normalize(attractor);
     return attractor;
 }
+
 
 float* repel (obj *agent, group *formation, float *repulsor) {
     repulsor[0] = repulsor[1] = repulsor[2] = 0.0;
@@ -107,6 +91,7 @@ float* repel (obj *agent, group *formation, float *repulsor) {
     }
     return repulsor;
 }
+
 
 void steerOne (obj *agent, group *formation) {
     float temp[3], final[3], alignment[3], attractor[3], repulsor[3], normv[3], normal[3], offset[3], angleOffset;
@@ -122,9 +107,6 @@ void steerOne (obj *agent, group *formation) {
     normalize(normv);
     normalize(agent->heading);
 
-    bool DRAW_VECTORS = true;
-
-    if (DRAW_VECTORS) {
     glBegin(GL_LINES);
         glColor3f(BLUE);    glVertex3fv(ORIGIN);    glVertex3fv(alignment);
         glColor3f(GREEN);   glVertex3fv(ORIGIN);    glVertex3fv(attractor);
@@ -133,7 +115,6 @@ void steerOne (obj *agent, group *formation) {
         glColor3f(MAGENTA); glVertex3fv(ORIGIN);    glVertex3fv(normv);
         glColor3f(CYAN);    glVertex3fv(ORIGIN);    glVertex3fv(final);
     glEnd();
-    }
 
     brake(agent);
 
@@ -141,24 +122,29 @@ void steerOne (obj *agent, group *formation) {
     crossProduct(agent->heading, final, normal);
     turn(-1.0*agent->rot_v + sign(normal[2])*0.5*angleOffset, agent); // critically damped oscillator
 
-
-
     rotateVector(agent->rot_v*radians, agent->rotaxis, agent->heading);
     rotateModel(agent->rot_v, agent->rotaxis, agent->objModel);
 
     impulse(agent);
-
-
-
-
 }
 
+
 void steerGroup (obj *agent[1000], group *formation) {
-    findGroupHeading(agent, formation);
-    findGroupCenter(agent, formation);
+    formation->heading[0] = formation->heading[1] = formation->heading[2] = 0.0;
+    for (int ii = 0; ii < formation->size; ii++) {
+        for (int dim = 0; dim < 3; dim++) {
+            formation->heading[dim] += agent[formation->list[ii]]->heading[dim];
+        }
+    }
+
+    formation->center[0] = formation->center[1] = formation->center[2] = 0.0;
+    for (int ii = 0; ii < formation->size; ii++) {
+        for (int dim = 0; dim < 3; dim++) {
+            formation->center[dim] += agent[formation->list[ii]]->position[dim] / formation->size;
+        }
+    }
+
     for (int ii = 0; ii < formation->size; ii++) {
         steerOne (agent[formation->list[ii]], formation);
     }
 }
-
-
