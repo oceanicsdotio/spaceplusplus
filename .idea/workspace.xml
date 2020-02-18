@@ -8,37 +8,76 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="00321ec0-5843-4bc0-8955-744b62bea9f5" name="Default Changelist" comment="ignore .idea">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/draw.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/models/agent.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/models/emplacement.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/models/interface.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/models/light.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/models/model.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spacegame/models/primitive.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/build.sh" afterDir="false" />
+    <list default="true" id="00321ec0-5843-4bc0-8955-744b62bea9f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/asteroid.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/density.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/texture" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-cpp.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-wasm.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/agent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/emplacement.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/interface2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/primitive.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/shipyard.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/texture.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/agent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bathysphere.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/cadet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/draw-fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/draw-vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/phong-fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/phong-vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/quad-vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/rotation-fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/rotation-vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/screen-fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/triangle-fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/triangle-vertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/glsl/update-fragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/space.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/space.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/space_bg.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/space_bg.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stream.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tessellate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/wind.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/wind.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agent.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stream.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tessellate.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/texture.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/webgl.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/spacegame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spacegame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asteroid-view.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asteroid.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dock.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drone-view.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drone.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/globe-model.h" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/models/globe.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/primitives.h" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/primitives.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quaternion.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation.h" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/simulation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/space.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tug.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/spacegame/models/shipyard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utility.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/draw.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/agent.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/emplacement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/globe.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/interface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/light.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/light.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/model.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/model.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/primitive.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/models/shipyard.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/primitives.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacegame/simulation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/build.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +86,15 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="GLSL Shader" />
+        <option value="Rust File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,22 +109,30 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/spacegame" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/asteroid" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -106,7 +162,22 @@
       <workItem from="1576731971968" duration="569000" />
       <workItem from="1579002641866" duration="252000" />
       <workItem from="1579002963499" duration="46000" />
-      <workItem from="1580342653580" duration="18976000" />
+      <workItem from="1580342653580" duration="19821000" />
+      <workItem from="1580402787041" duration="36625000" />
+      <workItem from="1580494130043" duration="17454000" />
+      <workItem from="1580518288146" duration="45478000" />
+      <workItem from="1581124362983" duration="5785000" />
+      <workItem from="1581275643654" duration="5000" />
+      <workItem from="1581284499056" duration="15718000" />
+      <workItem from="1581300285741" duration="25138000" />
+      <workItem from="1581471986317" duration="21767000" />
+      <workItem from="1581540204025" duration="23569000" />
+      <workItem from="1581569118502" duration="10668000" />
+      <workItem from="1581616477580" duration="25186000" />
+      <workItem from="1581787171417" duration="28730000" />
+      <workItem from="1581822059939" duration="9266000" />
+      <workItem from="1581871561084" duration="43392000" />
+      <workItem from="1582005400468" duration="5600000" />
     </task>
     <task id="LOCAL-00001" summary="ignore .idea">
       <created>1579002764707</created>
@@ -115,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579002764707</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="restructure and tweak">
+      <created>1580361660568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580361660568</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,24 +214,65 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ignore .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore .idea" />
+    <MESSAGE value="restructure and tweak" />
+    <option name="LAST_COMMIT_MESSAGE" value="restructure and tweak" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="323" y="53" width="860" height="820" key="CommitChangelistDialog2" timestamp="1579002764539">
+    <state x="353" y="124" width="800" height="690" key="#Plugins" timestamp="1580494118422">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
-    <state x="323" y="53" width="860" height="820" key="CommitChangelistDialog2/70.27.1370.873@70.27.1370.873" timestamp="1579002764539" />
-    <state x="541" y="214" width="424" height="497" key="FileChooserDialogImpl" timestamp="1580343652611">
+    <state x="353" y="124" width="800" height="690" key="#Plugins/70.27.1370.873@70.27.1370.873" timestamp="1580494118422" />
+    <state x="435" y="249" width="679" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581289087551">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
-    <state x="541" y="214" width="424" height="497" key="FileChooserDialogImpl/70.27.1370.873@70.27.1370.873" timestamp="1580343652611" />
+    <state x="435" y="249" width="679" height="403" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1370.873@70.27.1370.873" timestamp="1581289087551" />
+    <state x="441" y="190" width="624" height="557" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581129772275">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="441" y="190" width="624" height="557" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.27.1370.873@70.27.1370.873" timestamp="1581129772275" />
+    <state x="323" y="41" width="860" height="820" key="CommitChangelistDialog2" timestamp="1582011116100">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="323" y="41" width="860" height="820" key="CommitChangelistDialog2/70.27.1370.873@70.27.1370.873" timestamp="1582011116100" />
+    <state x="541" y="208" width="424" height="497" key="FileChooserDialogImpl" timestamp="1580494260819">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="541" y="208" width="424" height="497" key="FileChooserDialogImpl/70.27.1370.873@70.27.1370.873" timestamp="1580494260819" />
+    <state width="1324" height="216" key="GridCell.Tab.0.bottom" timestamp="1581293281791">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state width="1324" height="216" key="GridCell.Tab.0.bottom/70.27.1370.873@70.27.1370.873" timestamp="1581293281791" />
+    <state width="1324" height="216" key="GridCell.Tab.0.center" timestamp="1581293281789">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state width="1324" height="216" key="GridCell.Tab.0.center/70.27.1370.873@70.27.1370.873" timestamp="1581293281789" />
+    <state width="1324" height="216" key="GridCell.Tab.0.left" timestamp="1581293281789">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state width="1324" height="216" key="GridCell.Tab.0.left/70.27.1370.873@70.27.1370.873" timestamp="1581293281789" />
+    <state width="1324" height="216" key="GridCell.Tab.0.right" timestamp="1581293281790">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state width="1324" height="216" key="GridCell.Tab.0.right/70.27.1370.873@70.27.1370.873" timestamp="1581293281790" />
     <state x="353" y="192" width="800" height="541" key="Vcs.Push.Dialog.v2" timestamp="1579002770239">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
     <state x="353" y="192" width="800" height="541" key="Vcs.Push.Dialog.v2/70.27.1370.873@70.27.1370.873" timestamp="1579002770239" />
+    <state x="170" y="109" width="1170" height="679" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581891790589">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="170" y="109" width="1170" height="679" key="com.intellij.history.integration.ui.views.FileHistoryDialog/70.27.1370.873@70.27.1370.873" timestamp="1581891790589" />
     <state x="415" y="283" key="com.intellij.ide.util.TipDialog" timestamp="1579002965850">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
     <state x="415" y="283" key="com.intellij.ide.util.TipDialog/70.27.1370.873@70.27.1370.873" timestamp="1579002965850" />
+    <state x="238" y="51" width="867" height="849" key="find.popup" timestamp="1581124380394">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="238" y="51" width="867" height="849" key="find.popup/70.27.1370.873@70.27.1370.873" timestamp="1581124380394" />
+    <state x="418" y="209" width="672" height="678" key="search.everywhere.popup" timestamp="1581629040585">
+      <screen x="70" y="27" width="1370" height="873" />
+    </state>
+    <state x="418" y="209" width="672" height="678" key="search.everywhere.popup/70.27.1370.873@70.27.1370.873" timestamp="1581629040585" />
   </component>
 </project>

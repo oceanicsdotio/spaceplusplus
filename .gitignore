@@ -1,1 +1,4 @@
-.idea/
+.idea/*
+cmake-build-debug/
+target/
+Cargo.lock
