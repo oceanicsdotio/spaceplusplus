@@ -6,6 +6,54 @@ pub mod tessellate {
     use std::collections::{HashMap};
 
 
+    pub enum RightTriangulatedIrregularNetwork<T: Ord> {
+        Node {
+            value: T,
+            left: Box<RightTriangulatedIrregularNetwork<T>>,
+            right: Box<RightTriangulatedIrregularNetwork<T>>,
+        },
+        Empty,
+    }
+
+    impl<T: Ord> RightTriangulatedIrregularNetwork<T> {
+
+        pub fn new() -> Self {
+            RightTriangulatedIrregularNetwork::Empty
+        }
+
+        pub fn create(value: T) -> Self {
+            RightTriangulatedIrregularNetwork::Node {
+                value,
+                left: Box::new(RightTriangulatedIrregularNetwork::Empty),
+                right: Box::new(RightTriangulatedIrregularNetwork::Empty),
+            }
+        }
+
+        pub fn insert(&mut self, new_value: T) {
+            match self {
+                RightTriangulatedIrregularNetwork::Node {
+                    ref value,
+                    ref mut left,
+                    ref mut right,
+                } => match new_value.cmp(value) {
+                    // do stuff here
+                    _ => return,
+                },
+                RightTriangulatedIrregularNetwork::Empty => {
+                    *self = RightTriangulatedIrregularNetwork::create(new_value);
+                }
+            }
+        }
+
+        pub fn is_empty(&self) -> bool {
+            match self {
+                RightTriangulatedIrregularNetwork::Empty => true,
+                RightTriangulatedIrregularNetwork::Node { .. } => false,
+            }
+        }
+    }
+
+
     #[wasm_bindgen]
     pub struct RectilinearGrid {
         nx: usize,
