@@ -14,9 +14,43 @@
   <component name="ChangeListManager">
     <list default="true" id="00321ec0-5843-4bc0-8955-744b62bea9f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/space_bg.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/public/space_bg.wasm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tessellate.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tessellate.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-cpp.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build-cpp.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-wasm.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/agent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bathysphere.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cadet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/draw-fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/draw-vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/phong-fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/phong-vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/quad-vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/rotation-fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/rotation-vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/screen-fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/triangle-fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/triangle-vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/glsl/update-fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/space.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/space.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/space_bg.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/space_bg.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tessellate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wind.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agent.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp-src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stream.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tessellate.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp-src/test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cpp-src/texture.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webgl.rs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +65,7 @@
       <list>
         <option value="GLSL Shader" />
         <option value="Rust File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -49,23 +84,25 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rust-src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -118,7 +155,13 @@
       <workItem from="1581871561084" duration="43392000" />
       <workItem from="1582005400468" duration="5600000" />
       <workItem from="1582011018436" duration="737000" />
-      <workItem from="1582067786635" duration="4567000" />
+      <workItem from="1582067786635" duration="4791000" />
+      <workItem from="1582257204980" duration="623000" />
+      <workItem from="1582260104275" duration="5750000" />
+      <workItem from="1582646217039" duration="701000" />
+      <workItem from="1583214726247" duration="1925000" />
+      <workItem from="1583216663123" duration="26118000" />
+      <workItem from="1583591823231" duration="4664000" />
     </task>
     <task id="LOCAL-00001" summary="ignore .idea">
       <created>1579002764707</created>
@@ -141,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582011154640</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rust binary tree for RTIN">
+      <created>1582077227780</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582077227780</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +214,8 @@
     <MESSAGE value="ignore .idea" />
     <MESSAGE value="restructure and tweak" />
     <MESSAGE value="add cpp source back, README. all widgets working." />
-    <option name="LAST_COMMIT_MESSAGE" value="add cpp source back, README. all widgets working." />
+    <MESSAGE value="rust binary tree for RTIN" />
+    <option name="LAST_COMMIT_MESSAGE" value="rust binary tree for RTIN" />
   </component>
   <component name="WindowStateProjectService">
     <state x="353" y="124" width="800" height="690" key="#Plugins" timestamp="1580494118422">
@@ -175,14 +226,14 @@
       <screen x="70" y="27" width="1370" height="873" />
     </state>
     <state x="435" y="249" width="679" height="403" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1370.873@70.27.1370.873" timestamp="1581289087551" />
-    <state x="441" y="190" width="624" height="557" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581129772275">
+    <state x="441" y="184" width="624" height="557" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583216646409">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
-    <state x="441" y="190" width="624" height="557" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.27.1370.873@70.27.1370.873" timestamp="1581129772275" />
-    <state x="323" y="35" width="860" height="820" key="CommitChangelistDialog2" timestamp="1582011154266">
+    <state x="441" y="184" width="624" height="557" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.27.1370.873@70.27.1370.873" timestamp="1583216646409" />
+    <state x="323" y="29" width="860" height="820" key="CommitChangelistDialog2" timestamp="1582077227658">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
-    <state x="323" y="35" width="860" height="820" key="CommitChangelistDialog2/70.27.1370.873@70.27.1370.873" timestamp="1582011154266" />
+    <state x="323" y="29" width="860" height="820" key="CommitChangelistDialog2/70.27.1370.873@70.27.1370.873" timestamp="1582077227658" />
     <state x="541" y="208" width="424" height="497" key="FileChooserDialogImpl" timestamp="1580494260819">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
@@ -219,9 +270,9 @@
       <screen x="70" y="27" width="1370" height="873" />
     </state>
     <state x="238" y="51" width="867" height="849" key="find.popup/70.27.1370.873@70.27.1370.873" timestamp="1581124380394" />
-    <state x="418" y="209" width="672" height="678" key="search.everywhere.popup" timestamp="1581629040585">
+    <state x="418" y="209" width="672" height="678" key="search.everywhere.popup" timestamp="1583264727890">
       <screen x="70" y="27" width="1370" height="873" />
     </state>
-    <state x="418" y="209" width="672" height="678" key="search.everywhere.popup/70.27.1370.873@70.27.1370.873" timestamp="1581629040585" />
+    <state x="418" y="209" width="672" height="678" key="search.everywhere.popup/70.27.1370.873@70.27.1370.873" timestamp="1583264727890" />
   </component>
 </project>
