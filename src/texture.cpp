@@ -65,7 +65,7 @@ struct stateStruct {
 } state;
 
 
-auto testTexture = Texture("bin/density.dat", 50);
+auto testTexture = Texture("bin/density.dat", 50); // 
 auto lightingData = LightData();
 
 
@@ -158,6 +158,8 @@ public:
 
 int main(int argc, char** argv)
 {
+
+    std::cout << "Here" << "\n";
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
