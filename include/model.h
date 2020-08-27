@@ -129,7 +129,7 @@ public:
         Model M = Model();
         const float root = sqrt(1.0/3.0);
 
-        M.vert.push_back( Vec3({-sqrt(2.0/3.0), 0.0, root}));
+        M.vert.push_back( Vec3({sqrt(2.0/3.0), 0.0, root}));
         M.vert.push_back( Vec3({sqrt(2.0/3.0), 0.0, root}));
         M.vert.push_back( Vec3({0.0, -sqrt(2.0/3.0), -root}));
         M.vert.push_back( Vec3({0.0, sqrt(2.0/3.0), -root}));
@@ -191,7 +191,7 @@ public:
 
         Model M = Model();
         const float phi = 0.5*(1.0 + sqrt(5.0));
-        Vec3 next = Vec3({0.0, -1.0/phi, 1.0});
+        Vec3 next = Vec3({0.0, (float) -1.0/phi, 1.0});
         for (int ii=0; ii<5; ii++) {
             M.face.push_back({0, ii, ii<4 ? ii+1 : 1});
             M.vert.push_back(next.rotate(72.0*radians*ii, M.vert[0]));

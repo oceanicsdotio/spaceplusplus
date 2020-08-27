@@ -1,14 +1,14 @@
-GLfloat light_diffuse[] = {1.0,1.0,1.0,1.0};
-GLfloat light_position[] = {0.0,3.0,3.0,1.0};
-GLfloat light_specular[] = {1.0,1.0,1.0,1.0};
-GLfloat light_ambient[] = {1.0,1.0,1.0,1.0};
-GLfloat light1_diffuse[] = {0.0,0.0,1.0,1.0};
-GLfloat light1_position[] = {1.0,1.5,0.0,1.0};
-GLfloat light1_specular[] = {1.0,1.0,1.0,1.0};
-GLfloat light1_ambient[] = {1.0,1.0,1.0,1.0};
-GLfloat diffuse[] = {0.3,0.3,0.3,1.0};
-GLfloat ambient[] = {0.06,0.05,0.05,1.0};
-GLfloat specular[] = {0.6,0.6,0.6,1.0};
+GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
+GLfloat light_position[] = {0.0, 3.0, 3.0, 1.0};
+GLfloat light_specular[] = {1.0, 1.0, 1.0, 1.0};
+GLfloat light_ambient[] = {1.0, 1.0, 1.0,1.0};
+GLfloat light1_diffuse[] = {0.0, 0.0, 1.0, 1.0};
+GLfloat light1_position[] = {1.0, 1.5, 0.0, 1.0};
+GLfloat light1_specular[] = {1.0, 1.0, 1.0, 1.0};
+GLfloat light1_ambient[] = {1.0, 1.0, 1.0, 1.0};
+GLfloat diffuse[] = {0.3, 0.3, 0.3, 1.0};
+GLfloat ambient[] = {0.06, 0.05, 0.05, 1.0};
+GLfloat specular[] = {0.6, 0.6, 0.6, 1.0};
 GLfloat shininess = 40;
 
 
