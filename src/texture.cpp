@@ -10,7 +10,7 @@
 
 #include "../include/texture.h"
 #include "../include/light.h"
-#include "../include/interface2.h"
+#include "../include/interface.h"
 
 using namespace texture;
 using namespace lighting;

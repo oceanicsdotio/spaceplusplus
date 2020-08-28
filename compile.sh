@@ -1,0 +1,1 @@
+g++ ./src/texture.cpp -o ./bin/texture -lGL -lGLU -lglut -std=c++11
