@@ -1,4 +1,4 @@
-# SpacePP
+# Space++
 
 Just a humble asteroid mining simulator. This is used to develop and test control
 and group behavior models for multi-agent automation.
